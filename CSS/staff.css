@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*HEADER STYLING */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: teal;
+    width: 100%;
+    padding: .5rem .8rem;
+    position: relative;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffe;
+    padding: .3rem .8rem;
+    transition: all .7s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #ffe;
+    color: teal;
+    border-radius: .3rem;
+}
+
+.header-cta {
+    color: teal;
+    background: #eeef;
+    padding: .7rem;
+    border-radius: .8rem;
+    text-decoration: none;
+    transition: all .3s ease;
+    font-weight: 700;
+}
+
+.header-cta:hover {
+    cursor: pointer;
+    color: #0b401f;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: teal;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 999;
+    }
+
+    nav.active {
+        max-height: 330px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0.8rem 0;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/*BODY STYLING*/
+h1 {
+    text-align: center;
+    color: teal;
+    padding: 1.5rem;
+}
+
+main p {
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 1.5rem;
+    color: teal;
+}
+
+/*member cards*/
+
+.card-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.3);
+    transition: transform .3s ease;
+    /*max-width: 450px;*/
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+}
+
+.member-card a {
+    text-decoration: none;
+    
+}
+
+.member-card i {
+    margin-right: .7rem;
+    color: rgb(3, 62, 62);
+}
+
+.image {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(3, 77, 77);
+    font-weight: 600;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.15);
+    width: 150px;
+    height: 150px;
+}
+
+.name {
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.15);
+    padding: .3rem .7rem;
+    border-radius: .3rem;
+    margin-bottom: auto;
+}
+
+
+
+
+
+/**FOOTER SECTION*/
+
+footer {
+    background: teal;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.footer-links ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 460px) {
+    footer-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.media {
+    color: #eee;
+    padding: 2rem;
+}
+
+.copy {
+    text-align: center;
+    color: #fffe;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eee;
+    margin: 1rem;
+    transition: all.3s ease;
+    font-weight: bold;
+}
+
+
+footer a:hover {
+    background: #eee;
+    color: teal;
+    padding: .4rem .8rem;
+    border-radius: .5rem;
+    ;
+}
+
+footer ul {
+    list-style: none;
+}

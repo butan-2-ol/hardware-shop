@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Staff</title>
+    <link rel="stylesheet" href="../CSS/staff.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../IMAGES/images.png">
+</head>
+<body>
+    <!--header-->
+
+    <header>
+        <img src="../IMAGES/images.png" alt="site logo">
+
+
+        <!--hamburger button-->
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <ul  >
+                <li><a href="../HTML/index.html"><i>Home</i></a></li>
+                <li><a href="../HTML/about.html"><i>About</i></a></li>
+                <li><a href="../HTML/products.html"><i>Products</i></a></li>
+                <li><a href="../HTML/contact.html"><i>Contact Us</i></a></li>
+                <li><a href="../HTML/staff.html"><i>Staff</i></a></li>
+            </ul>
+        </nav>
+
+        <a href="../HTML/products.html" class="header-cta">Shop Now</a>
+    </header>
+
+    <script>
+    // Check if user is logged in
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+    
+    if (!isLoggedIn || isLoggedIn !== "true") {
+        window.location.href = "../HTML/login.html";
+    }
+    
+    // Display welcome message with user info
+    const userName = sessionStorage.getItem("userName");
+    const userRole = sessionStorage.getItem("userRole");
+    
+    if (userName) {
+        const welcomeDiv = document.createElement("div");
+        welcomeDiv.style.cssText = `
+            background: #e0f2fe;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        `;
+        welcomeDiv.innerHTML = `
+            <div>
+                <strong>Welcome, ${userName}!</strong> 
+                <span style="color: teal; margin-left: 10px;">Role: ${userRole}</span>
+            </div>
+            <button id="logoutBtn" style="
+                background: #ff4444; 
+                color: white; 
+                border: none; 
+                padding: 8px 16px; 
+                border-radius: 5px; 
+                cursor: pointer;
+            ">Logout</button>
+        `;
+        
+        const header = document.querySelector("header");
+        header.insertAdjacentElement("afterend", welcomeDiv);
+        
+        // Logout functionality
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            sessionStorage.clear();
+            window.location.href = "../HTML/login.html";
+        });
+    }
+</script>
+
+    <main>
+        <h1>Welcome to the Staff Page</h1>
+        <p>Access team information and internal contacts</p>
+    </main>
+
+    <section class="members-cont">
+        <h2>Our Team</h2>
+        <div class="card-cont">
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/vin.jpeg" alt="store manager">
+                    <div class="name">
+                        <p>Vincent Kojo Djabassou</p>
+                        <p>| Shop Manager</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:avemariavin12@gmail.com">avemariavin12@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0248472367">0248472367</a></p>
+                <p><i class="fa-solid fa-location"></i>Tanoso</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+             <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/afram.jpeg" alt="administrator">
+                    <div class="name">
+                        <p>Afram Godfred</p>
+                        <p>| Administrator</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:aframgodfred5@gmail.com ">aframgodfred5@gmail.com </a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0556216769">0556216769</a></p>
+                <p><i class="fa-solid fa-location"></i>Kumasi</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/luqman.jpeg" alt="auditor" >
+                    <div class="name">
+                        <p>Luqman Hammadu</p>
+                        <p>| Auditor</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:amadulukman98@gmail.com ">amadulukman98@gmail.com </a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0241214683">0241214683</a></p>
+                <p><i class="fa-solid fa-location"></i>IPT</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/adjei.jpeg" alt="store manager">
+                    <div class="name">
+                        <p>Ajei Boakye Antwi </p>
+                        <p>| Accountant</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto: adjeiboakye0@gmail.com"> adjeiboakye0@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0574132028">0574132028</a></p>
+                <p><i class="fa-solid fa-location"></i>Abuakwa</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/owusu.jpeg" alt="store manager">
+                    <div class="name">
+                        <p>Graham Agyapong</p>
+                        <p>| Stock Manager</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:owusuramsayer@gmail.com  ">owusuramsayer@gmail.com  </a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0546276502">0546276502</a></p>
+                <p><i class="fa-solid fa-location"></i>Tanoso</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/amartey.jpg" alt="store manager" >
+                    <div class="name">
+                        <p>Abberteh Amartey</p>
+                        <p>| CEO Ba😇</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:champamartey01@gmail.com">champamartey01@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0508783785">0508783785</a></p>
+                <p><i class="fa-solid fa-location"></i>Tanoso</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵10,000</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/owura.jpeg" alt="delivery coordinator" >
+                    <div class="name">
+                        <p>Owura Nyarko Festus</p>
+                        <p>| Delivery Coordinator</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:nyarkoowura@yahoo.com">nyarkoowura@yahoo.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0541752595">0541752595</a></p>
+                <p><i class="fa-solid fa-location"></i>Esereso</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+
+            <div class="member-card">
+                <div class="image">
+                    <img src="../IMAGES/dosty.jpeg" alt="delivery driver" >
+                    <div class="name">
+                        <p>Darko Owusu</p>
+                        <p>| Delivery Driver</p>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:darkokwadwo85@gmail.com">darkokwadwo85@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:0542997834">0542997834</a></p>
+                <p><i class="fa-solid fa-location"></i>Abuakwa</p>
+                <p><i class="fa-regular fa-credit-card"></i>GH₵2,500</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+
+
+    <footer>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="../HTML/index.html"><i>Home</i></a></li>
+                    <li><a href="../HTML/about.html"><i>About</i></a></li>
+                    <li><a href="../HTML/products.html"><i>Products</i></a></li>
+                    <li><a href="../HTML/contact.html"><i>Contact Us</i></a></li>
+                    <li><a href="../HTML/staff.html"><i>Staff</i></a></li>
+                </ul>
+            </div>
+                
+            <div class="media">
+                
+                    <a href="https://wa.me/233508783785" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://youtube.com"ctarget="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                   
+                
+            </div>
+        
+
+        <p class="copy">&copy; 2026 Adom  Hardware Shop</p>
+    </footer>
+    <script src="../JS/about.js"></script>
+</body>
+</html>
