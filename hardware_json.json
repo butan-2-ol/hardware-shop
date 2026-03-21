@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "HTML/*.html",
@@ -23,6 +24,9 @@
     { "src": "/products", "dest": "/HTML/products.html" },
     { "src": "/contact", "dest": "/HTML/contact.html" },
     { "src": "/staff", "dest": "/HTML/staff.html" },
-    { "src": "/login", "dest": "/HTML/login.html" }
+    { "src": "/login", "dest": "/HTML/login.html" },
+    { "src": "/CSS/(.*)", "dest": "/CSS/$1" },
+    { "src": "/JS/(.*)", "dest": "/JS/$1" },
+    { "src": "/IMAGES/(.*)", "dest": "/IMAGES/$1" }
   ]
 }
