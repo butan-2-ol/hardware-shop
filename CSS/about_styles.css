@@ -14,7 +14,7 @@ header {
     /*height: 3.5rem;*/
     width: 100%;
     padding: .5rem .8rem;
-   
+   position: relative;
 }
 
 header ul {
@@ -75,6 +75,7 @@ nav a:hover {
     font-size: 1.8rem;
     color: #fffe;
     cursor: pointer;
+    z-index: 100;
 }
 
 @media(max-width: 768px) {
@@ -171,6 +172,7 @@ main a:hover {
     gap: 1rem;
     padding: 1rem;
     flex-wrap: wrap;
+    box-shadow: 0px 8px 14px rgba(0,0,0,0.13);
 }
 
 .management-card {
@@ -185,6 +187,13 @@ main a:hover {
     max-width: 500px;
     width: 250px;
     overflow: hidden;
+    transition: all  0.4s ease;
+    margin-bottom: 1rem;
+}
+
+.management-card:hover {
+    box-shadow: 0px 8px 14px rgba(0,0,0,0.3) ;
+   
 }
 
 .management-card img {
@@ -192,6 +201,7 @@ main a:hover {
     height: 150px;
     border-radius: 50%;
     transition: all .6s ease;
+    object-fit: cover;
 }
 
 
