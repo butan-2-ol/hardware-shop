@@ -14,9 +14,15 @@ header {
     /*height: 3.5rem;*/
     width: 100%;
     padding: .5rem .8rem;
-   /* position: fixed;*/
+    /*position: fixed;*//
+    top: 0;
+   /* margin-bottom: 7rem;*/
    
 }
+
+header img {
+        display: none;
+    }
 
 header ul {
     display: flex;
@@ -61,33 +67,9 @@ nav a:hover {
     color: #0b401f;
     display: block;
 }
-/*
-@media(max-width: 420px) {
-     nav {
-        display: none
-    }
 
-}
-*/
 
-/*form styles*/
 
-    
-form {
-    display: flex;
-    flex-direction: column;
-    gap: .2rem;
-    background: linear-gradient(to right, rgb(2, 133, 133), rgb(1, 45, 45));
-    padding: 1rem;
-    border-radius: .5rem;
-    color: #ffe;
-    max-height: 500px;
-    min-width: 300px;
-    
-
-   /* margin-top: 5rem;*/
-    
-}
 /*
 @media(max-width: 420px) {
     form {
@@ -150,6 +132,25 @@ form {
 
 /*FORM STYLES*/
 
+/*form styles*/
+
+    
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    background: linear-gradient(to right, rgb(2, 133, 133), rgb(1, 45, 45));
+    padding: 1rem;
+    border-radius: .5rem;
+    color: #ffe;
+    max-height: 500px;
+    min-width: 300px;
+    
+
+    /*margin-top: 5rem;*/
+    
+}
+
 form h1 {
     color: #fffe;
     font-style: italic;
@@ -172,6 +173,9 @@ form button {
     cursor: pointer;
     transition: all .3s ease;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form button:hover {
@@ -196,7 +200,8 @@ input:focus, textarea:focus {
 }
 
 .body-cont {
-    gap: 2rem;
+    margin-top: 7rem;
+    gap: 1.5rem;
     padding: 1rem 1.3rem;
     max-width: 100%;
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
@@ -227,7 +232,8 @@ input:focus, textarea:focus {
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.5rem;
 
 }
 
@@ -246,7 +252,7 @@ input:focus, textarea:focus {
 
 .location p {
     display: flex;
-    gap: 5px;
+    gap: 1px;
     align-items: center;
     
 }
@@ -307,3 +313,24 @@ footer a:hover {
 footer ul {
     list-style: none;
 }
+
+@media(max-width: 768px) {
+            .footer-links ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+
+            .media-links {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                
+            }
+
+            .media {
+                display: flex;
+                flex-direction: column;
+            }
+        }

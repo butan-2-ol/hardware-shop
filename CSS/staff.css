@@ -56,6 +56,12 @@ nav a:hover {
     color: #0b401f;
 }
 
+@media(max-width: 768px) {
+    header img {
+        display: none;
+    }
+}
+
 /* HAMBURGER MENU */
 .hamburger {
     display: none;
@@ -156,12 +162,14 @@ h2 {
 
 .image {
     display: flex;
-    padding: 1rem;
+    padding: .3rem;
     gap: 1rem;
     align-items: center;
     overflow: hidden;
     color: rgb(3, 77, 77);
     font-weight: 600;
+    width: 100%;
+    justify-content: space-between;
 }
 
 img {
@@ -237,3 +245,26 @@ footer a:hover {
 footer ul {
     list-style: none;
 }
+
+@media(max-width: 768px) {
+            .footer-links ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+
+            .media-links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                
+            }
+
+            .media {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }

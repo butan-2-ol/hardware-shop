@@ -22,6 +22,14 @@ header {
    
 }
 
+@media(max-width: 768px) {
+    
+
+    header img {
+        display: none;
+    }
+}
+
 header ul {
     display: flex;
     list-style: none;
@@ -165,6 +173,14 @@ p {
     transition: all .3s ease;
     flex: 0;
     z-index: 0;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: .3rem;
+    margin: 0;
 }
 
 
@@ -372,3 +388,26 @@ footer a:hover {
 footer ul {
     list-style: none;
 }
+
+@media(max-width: 768px) {
+            .footer-links ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+
+            .media-links {
+                display: flex;
+                
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                
+            }
+
+            .media {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }

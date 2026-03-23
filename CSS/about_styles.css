@@ -132,6 +132,16 @@ main {
     background: linear-gradient(to bottom, teal, #fffe);
 }
 
+@media(max-width: 768px) {
+    main h1 {
+        text-align: center;
+    }
+
+    header img {
+        display: none;
+    }
+}
+
 main h1 {
     font-size: 2.5rem;
     /*color: #fff;*/
@@ -231,6 +241,13 @@ main a:hover {
     justify-content: space-around;
     padding: 1rem;
     gap: 2rem;
+}
+
+@media(max-width: 768px) {
+    .mission {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .miss-card {
@@ -477,3 +494,24 @@ footer a:hover {
 footer ul {
     list-style: none;
 }
+
+@media(max-width: 768px) {
+            .footer-links ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+
+            .links-media {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                
+            }
+
+            .media {
+                display: flex;
+                flex-direction: column;
+            }
+        }
