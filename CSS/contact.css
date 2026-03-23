@@ -5,24 +5,29 @@
 }
 
 /*HEADER STYLING */
-
+body {
+    margin-top: 5rem;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: teal;
-    /*height: 3.5rem;*/
     width: 100%;
     padding: .5rem .8rem;
-    /*position: fixed;*//
+    position: fixed;
     top: 0;
-   /* margin-bottom: 7rem;*/
+    z-index: 10;
    
 }
 
-header img {
-        display: none;
-    }
+
+@media(max-width: 768px) {
+    
+    header img {
+            display: none;
+        }
+}
 
 header ul {
     display: flex;
@@ -70,13 +75,6 @@ nav a:hover {
 
 
 
-/*
-@media(max-width: 420px) {
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-}*/
 
 /*HAMBURGER MENU*/
 
@@ -200,12 +198,11 @@ input:focus, textarea:focus {
 }
 
 .body-cont {
-    margin-top: 7rem;
+    
     gap: 1.5rem;
     padding: 1rem 1.3rem;
     max-width: 100%;
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
-   
     margin: .5rem;
     overflow: hidden;
     /*width: 100vh;*/
@@ -286,6 +283,7 @@ footer {
 .media {
     color: #eee;
     padding: 2rem;
+    margin-left: 30%;
 }
 
 .copy {
