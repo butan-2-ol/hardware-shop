@@ -4,6 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 /*HEADER STYLING */
 
 header {
@@ -14,7 +15,10 @@ header {
     /*height: 3.5rem;*/
     width: 100%;
     padding: .5rem .8rem;
-    position: relative;
+    position: fixed;
+    flex: 1;
+    top: 0;
+    z-index: 100;
    
 }
 
@@ -159,6 +163,8 @@ p {
     color: #fffe;
     border-radius: .5rem;
     transition: all .3s ease;
+    flex: 0;
+    z-index: 0;
 }
 
 
@@ -244,6 +250,71 @@ textarea {
 .specific-product button:hover {
     transform: translateY(-4px);
 }
+
+
+/* Cart Sidebar Animation */
+.cart-open {
+    right: 0 !important;
+}
+
+
+
+/* Cart Item Styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item-price {
+    color: teal;
+    font-size: 0.9rem;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart-item-quantity button {
+    background: #ddd;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-item-quantity button:hover {
+    background: teal;
+    color: white;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+
+
 
 
 /**FOOTER SECTION*/
