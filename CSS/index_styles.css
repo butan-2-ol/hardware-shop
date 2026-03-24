@@ -376,15 +376,20 @@ main h1 {
 
 .choose-card {
     background: teal;
-    /*max-width: 500px;*/
-    padding: 1rem;
+    
+    padding: .2rem;
     overflow: hidden;
     margin: .2rem;
     border-radius: .8rem;
     color: #eee;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.choose-card p {
+    padding: 1rem;
 }
 
 .choose-card img {
