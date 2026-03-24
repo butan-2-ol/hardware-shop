@@ -141,8 +141,8 @@ form {
     padding: 1rem;
     border-radius: .5rem;
     color: #ffe;
-    max-height: 500px;
-    min-width: 300px;
+    min-height: 700px;
+    max-width: 300px;
     
 
     /*margin-top: 5rem;*/
@@ -161,7 +161,7 @@ form p {
 
 form button {
     border: none;
-    padding: 1rem 1.9rem;
+    padding: 1rem 1.5rem;
     background: #fffe;
     border-radius: .4rem;
     color: teal;
@@ -182,7 +182,7 @@ form button:hover {
 
 label {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 input, textarea {
     width: 100%;
@@ -199,16 +199,18 @@ input:focus, textarea:focus {
 
 .body-cont {
     
-    gap: 1.5rem;
+    gap: 3.5rem;
     padding: 1rem 1.3rem;
     max-width: 100%;
     box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
     margin: .5rem;
-    overflow: hidden;
+   /* overflow: hidden;
     /*width: 100vh;*/
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    align-items: center;
     border-radius: .5rem;
+    justify-content: center;
+    
 }
 
 @media(max-width: 420px) {
@@ -216,6 +218,7 @@ input:focus, textarea:focus {
         display: flex;
         flex-direction: column;
         border-radius: .5rem;
+        gap: 4rem;
 }
     
 }
@@ -226,13 +229,18 @@ input:focus, textarea:focus {
     padding: 1rem;
     border-radius: .5rem;
     color: #fffe;
-    min-height: 500px;
+    max-height: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
-    align-items: center;
+    /*align-items: center;*/
+    
+}
 
+.location p {
+    text-align: left;
 }
 
 .location a {
@@ -272,15 +280,16 @@ footer {
 .footer-links ul {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+   /*flex-wrap: wrap;*/
 }
-
+/*
 @media(max-width: 460px) {
     footer-links ul {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
-}
+}*/
 .media {
     color: #eee;
     padding: 2rem;
@@ -298,19 +307,23 @@ footer a {
     margin: 1rem;
     transition: all.3s ease;
     font-weight: bold;
+    padding: .4rem .8rem;
+    width: 100%;
+    transition: all .3s ease;
 }
 
 
 footer a:hover {
     background: #eee;
     color: teal;
-    padding: .4rem .8rem;
+    /*padding: .4rem .8rem;*/
     border-radius: .5rem;
-    ;
+    
 }
 
 footer ul {
     list-style: none;
+  
 }
 
 @media(max-width: 768px) {
@@ -331,5 +344,9 @@ footer ul {
             .media {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
+
+            
         }

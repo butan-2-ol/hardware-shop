@@ -141,7 +141,7 @@ h1 {
 } 
 h2{
     text-align: center;
-    color: rgb(9, 39, 39);
+    color: #fffe;
     margin: 1rem;
     background: linear-gradient(to left,#fffe 0%, teal 50%, #fffe 100%);
 }
@@ -221,12 +221,16 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem;
+    padding: 1.5rem;
     border: .2px dotted teal;
     margin: 1rem;
     border-radius: .3rem;
     justify-content: center;
    
+}
+
+.specific-product h3 {
+    display: inline;
 }
 
 .specific-product span {

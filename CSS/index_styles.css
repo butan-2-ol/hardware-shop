@@ -290,7 +290,21 @@ main h1 {
 }
 
 .featured-card {
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    background: linear-gradient(to bottom, teal, rgb(4, 51, 51));
+    overflow: hidden;
+    padding: .2rem;
+    color: #fffe;
+    border-radius: .5rem;
+    transition: all .3s ease;
+    flex: 0;
+    z-index: 0;
+    /*display: flex;
     flex-direction: column;
     
     overflow: hidden;
@@ -324,6 +338,7 @@ main h1 {
     padding: .8rem;
     color: #fffe;
     margin-top: auto;
+    width: 100%;
 }
 
 .card-info p {

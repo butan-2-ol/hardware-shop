@@ -422,6 +422,13 @@ main a:hover {
     gap: 3rem;
     margin: 1rem;
 }
+@media(max-width: 768px) {
+    .cta-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
 
 .cta-links a {
     text-decoration: none;
